@@ -24,7 +24,7 @@ function woocommerce_isbank3d_init(){
       $this->description = $this->settings['description'];
       $this->merchant_id = $this->settings['merchant_id'];
       $this->store_key = $this->settings['store_key'];
-      $this->liveurl = 'https://entegrasyon.asseco-see.com.tr/fim/est3Dgate';
+      $this->liveurl = 'https://sanalpos.isbank.com.tr/fim/est3Dgate';
 
       $this->msg['message'] = "";
       $this->msg['class'] = "";
