@@ -93,8 +93,8 @@ function woocommerce_isbank3d_init(){
         $clientId = $this->merchant_id;      //Banka tarafindan magazaya verilen isyeri numarasi
         $amount = $order->order_total;             //tutar
         $oid = $order_id;                    //Siparis numarasi
-        $okUrl = $woocommerce->cart->get_checkout_url().'?wc-api=isbank3d';      //Islem basariliysa dönülecek isyeri sayfasi  (3D isleminin ve ödeme isleminin sonucu)
-        $failUrl = $woocommerce->cart->get_checkout_url().'?wc-api=isbank3d';    //Islem basarisizsa dönülecek isyeri sayfasi  (3D isleminin ve ödeme isleminin sonucu)
+        $okUrl = bloginfo('url').'/wc-api/WC_Isbank3D_Pos';      //Islem basariliysa dönülecek isyeri sayfasi  (3D isleminin ve ödeme isleminin sonucu)
+        $failUrl = bloginfo('url').'/wc-api/WC_Isbank3D_Pos';    //Islem basarisizsa dönülecek isyeri sayfasi  (3D isleminin ve ödeme isleminin sonucu)
         $rnd = microtime();                                     //Tarih ve zaman gibi sürekli degisen bir deger güvenlik amaçli kullaniliyor
         $taksit = "";             //Taksit sayisi
         $islemtipi="Auth";          //Islem tipi
