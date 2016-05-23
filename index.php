@@ -7,6 +7,21 @@ Version: 1.0
 Author: Yasin Altıntaş
 Author URI: http://www.tema.ninja
 */
+define( 'ninja_url', 'http://www.tema.ninja' );
+define( 'ninja_name', 'İşbank Sanal Pos (OOS)' );
+if( !class_exists( 'Ninja_Updater' ) ) {
+	include( dirname( __FILE__ ) . '/updater.php' );
+}
+$license_key = '';
+// setup the updater
+$edd_updater = new Ninja_Updater( ninja_url, __FILE__, array(
+		'version' 	=> '1.0',
+		'license' 	=> $license_key,
+		'item_name'     => ninja_name,
+		'author' 	=> 'Tema Ninja',
+		'url'           => home_url()
+	)
+);
 add_action('plugins_loaded', 'woocommerce_isbank3d_init', 0);
 function woocommerce_isbank3d_init(){
   if(!class_exists('WC_Payment_Gateway')) return;
